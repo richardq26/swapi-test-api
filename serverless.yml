@@ -1,0 +1,46 @@
+service: swapi-test-api
+
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+  stage: dev
+  region: us-east-1
+  apiGateway:
+    shouldStartNameWithService: true
+  environment: ${file(env.${self:provider.stage}.json)}
+  timeout: 30
+
+package:
+  individually: true
+  patterns:
+    - "!.serverless/**"
+    - "!.git/**"
+    - "!*.md"
+    - "!env.*.json"
+
+functions:
+  app:
+    handler: handler.Server
+    events:
+      - http:
+          path: /{proxy+}
+          method: any
+          cors: 
+            origin: ""
+            headers:
+            - Content-Type
+            allowCredentials: false
+
+layers:
+  Api:
+    path: layers
+    name: ${self:service}-layer-${provider.stage}-dependencies
+    description: Layer para el API
+    compatibleRuntimes:
+      - nodejs14.x
+
+plugins:
+  - serverless-offline

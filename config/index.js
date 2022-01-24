@@ -1,0 +1,9 @@
+exports.NOMBRE_DB= process.env.NOMBRE_DB;
+exports.HOST_DB= process.env.HOST_DB;
+exports.PORT = process.env.PORT;
+exports.USERNAME= process.env.USERNAME;
+exports.PASSWORD= process.env.PASSWORD;
+exports.REGION= process.env.REGION;
+exports.API_KEY= process.env.API_KEY;
+exports.URL= process.env.URL;
+exports.TRANSLATE_URL= process.env.TRANSLATE_URL;
