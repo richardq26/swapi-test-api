@@ -19,3 +19,6 @@ npm run test => Iniciar pruebas unitarias de servicios con jest
 npm run deploy => Desplegar en aws lambda        
 npm run deployfn => Desplegar solo la función en aws lambda    
 
+### Traducción de campos:
+La traducción de keys de los objetos de swapi se realiza por medio de los helpers utilizando google cloud translate api
+
