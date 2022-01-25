@@ -1,5 +1,5 @@
 const typeorm = require("typeorm");
-const { StarshipEntity } = require("../entities");
+const { SerieCharacterEntity, FavoriteEntity } = require("../entities");
 const EntitySchema = typeorm.EntitySchema;
 const { NOMBRE_DB, HOST_DB, PORT, USERNAME, PASSWORD } = require("../config");
 const connectionOptions = {
@@ -14,7 +14,10 @@ const connectionOptions = {
   formatOptions: {
     castParameters: false,
   },
-  entities: [new EntitySchema(StarshipEntity)],
+  entities: [
+    new EntitySchema(SerieCharacterEntity),
+    new EntitySchema(FavoriteEntity),
+  ],
 };
 
 var cachedConnection;

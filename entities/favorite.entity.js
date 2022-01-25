@@ -1,14 +1,17 @@
 module.exports = {
-  name: "Starship",
+  name: "Favorite",
   columns: {
     id: {
       primary: true,
       type: "int",
       generated: true,
     },
-    nombre: {
+    tipo: {
       type: "varchar",
       default: null,
+    },
+    idSwapiModel: {
+      type: "int",
     },
     created: {
       type: "timestamp",

@@ -4,9 +4,22 @@ class App {
     this.setRoutes();
   }
   setRoutes() {
-    this.app.register(require("./starships/starship.routes"), { prefix: "/starships" });
-    this.app.register(require("./species/species.routes"), { prefix: "/species" });
-    this.app.register(require("./vehicles/vehicles.routes"), { prefix: "/vehicles" });
+    this.app.register(require("./starships/starship.routes"), {
+      prefix: "/starships",
+    });
+    this.app.register(require("./species/species.routes"), {
+      prefix: "/species",
+    });
+    this.app.register(require("./vehicles/vehicles.routes"), {
+      prefix: "/vehicles",
+    });
+    this.app.register(require("./serieCharacter/serieCharacter.routes"), {
+      prefix: "/serieCharacter",
+    });
+    this.app.register(require("./favorites/favorites.routes"), {
+      prefix: "/favorites",
+    });
+
     this.app.use((err, req, res, next) => {
       res
         .header("Access-Control-Allow-Origin", "*")

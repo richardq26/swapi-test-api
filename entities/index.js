@@ -1,4 +1,5 @@
 module.exports = {
   EntityNames: require("./entity.names"),
-  StarshipEntity: require("./starship.entity"),
+  FavoriteEntity: require("./favorite.entity"),
+  SerieCharacterEntity: require("./serieCharacter.entity"),
 };
