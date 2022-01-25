@@ -1,5 +1,5 @@
-exports.NOMBRE_DB= process.env.NOMBRE_DB;
-exports.HOST_DB= process.env.HOST_DB;
+exports.DB_NAME= process.env.DB_NAME;
+exports.DB_HOST= process.env.DB_HOST;
 exports.PORT = process.env.PORT;
 exports.USERNAME= process.env.USERNAME;
 exports.PASSWORD= process.env.PASSWORD;

@@ -1,12 +1,12 @@
 const typeorm = require("typeorm");
 const { SerieCharacterEntity, FavoriteEntity } = require("../entities");
 const EntitySchema = typeorm.EntitySchema;
-const { NOMBRE_DB, HOST_DB, PORT, USERNAME, PASSWORD } = require("../config");
+const { DB_NAME, DB_HOST, PORT, USERNAME, PASSWORD } = require("../config");
 const connectionOptions = {
   type: "mysql",
   synchronize: false,
-  database: NOMBRE_DB,
-  host: HOST_DB,
+  database: DB_NAME,
+  host: DB_HOST,
   port: Number(PORT),
   username: USERNAME,
   password: PASSWORD,
