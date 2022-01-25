@@ -4,7 +4,7 @@ const EntitySchema = typeorm.EntitySchema;
 const { NOMBRE_DB, HOST_DB, PORT, USERNAME, PASSWORD } = require("../config");
 const connectionOptions = {
   type: "mysql",
-  synchronize: true,
+  synchronize: false,
   database: NOMBRE_DB,
   host: HOST_DB,
   port: Number(PORT),
