@@ -3,9 +3,9 @@ Api de pruebas usando la api de Star Wars
 ### Documentación de rutas:
 [URL ENDPOITNS](https://documenter.getpostman.com/view/14224194/UVe9RV2f)
 ## Uso:
-Para el uso de la api se requiere acceder a la URL en el punto "Documentación"                 
+Para el uso de la api se requiere acceder a la URL en el punto "Documentación de rutas"                 
 
-Todos los endpoints se encuentran desplegados en la url de Documentación y cada carpeta tiene breves descripciones e instrucciones de uso si se necesitara.      
+Todos los endpoints se encuentran desplegados y cada carpeta tiene breves descripciones e instrucciones de uso si se necesitara.      
     
 Los endpoints no se encuentran con autorización o restricción de algún tipo.
 
