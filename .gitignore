@@ -2,5 +2,3 @@ node_modules/
 package-lock.json
 .serverless/
 env.*.json
-!env.example.json
-*.zip

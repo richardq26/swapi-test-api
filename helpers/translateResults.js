@@ -2,6 +2,10 @@ const translateArray = require("./translateArray");
 
 module.exports = async (results) => {
   if (Array.isArray(results)) {
+    // Si es un array, se traduce los ObjectKeys de cada objeto,
+    // para no tener que traducir todo el array y gastar tiempo y recursos
+    // En el for se reemplaza cada key del objeto por su key traducida en orden
+    // como estuvieron en el array original
     const arrayTranslated = await translateArray(Object.keys(results[0]));
     results.forEach((result) => {
       let i = 0;

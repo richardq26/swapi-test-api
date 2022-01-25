@@ -1,11 +1,13 @@
 const { URL } = require("../../../config");
 const axios = require("axios");
 const { translateResults } = require("../../../helpers");
-module.exports = async (id) => {
+module.exports = async ({ page = 1, search = "" }) => {
   try {
-    let { data } = await axios.get(`${URL}/species/${id}`);
+    let {
+      data: { results },
+    } = await axios.get(`${URL}/vehicles?page=${page}&search=${search}`);
 
-    return await translateResults(data);
+    return await translateResults(results);
   } catch (error) {
     return {
       error: {

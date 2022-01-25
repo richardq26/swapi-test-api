@@ -6,6 +6,7 @@ class App {
   setRoutes() {
     this.app.register(require("./starships/starship.routes"), { prefix: "/starships" });
     this.app.register(require("./species/species.routes"), { prefix: "/species" });
+    this.app.register(require("./vehicles/vehicles.routes"), { prefix: "/vehicles" });
     this.app.use((err, req, res, next) => {
       res
         .header("Access-Control-Allow-Origin", "*")

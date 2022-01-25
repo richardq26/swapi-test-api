@@ -24,20 +24,27 @@ package:
 functions:
   app:
     handler: handler.Server
+    layers:
+      - { Ref: ApiLambdaLayer }
+    package:
+      patterns:
+        - "!package-lock.json"
+        - "!package.json"
+        - "!node_modules/**"
     events:
       - http:
           path: /{proxy+}
           method: any
-          cors: 
+          cors:
             origin: ""
             headers:
-            - Content-Type
+              - Content-Type
             allowCredentials: false
 
 layers:
   Api:
     path: layers
-    name: ${self:service}-layer-${provider.stage}-dependencies
+    name: ${self:service}-${self:provider.stage}-dependencies
     description: Layer para el API
     compatibleRuntimes:
       - nodejs14.x

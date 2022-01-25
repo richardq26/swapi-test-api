@@ -3,7 +3,7 @@ const axios = require("axios");
 const { translateResults } = require("../../../helpers");
 module.exports = async (id) => {
   try {
-    let { data } = await axios.get(`${URL}/species/${id}`);
+    let { data } = await axios.get(`${URL}/vehicles/${id}`);
 
     return await translateResults(data);
   } catch (error) {
