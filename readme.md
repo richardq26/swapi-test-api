@@ -5,12 +5,14 @@ Api de pruebas usando la api de Star Wars
 ## Uso:
 Para el uso de la api se requiere acceder a la URL en el punto "Documentación"                 
 
-Favoritos => Le permite agregar a una sola entidad sus elementos favoritos de la api de star wars, valores permitidos: vehiculo, nave, especie                  
+Todos los endpoints se encuentran desplegados en la url de Documentación. 
 
-Personajes de serie => Nuevo componente que swapi no maneja, permite crear personajes de serie en una base de datos para luego acceder a ellos           
+Los endpoints no se encuentran con autorización o restricción de algún tipo.
 
-Todos los endpoints se encuentran desplegados en la url de Documentación.      
-
+### Modelos nuevos:
+En la carpeta entities           
+- Favorite: Permite agregar objetos de swapi a una tabla en base de datos como si fuera una colección de favoritos, usando solo el id.
+- serieCharacter: Componente que no maneja swapi, en este test le permite crear personajes de serie y agregarlos a la base de datos del sistema.
 ### Comandos:   
 npm run local => Iniciar serverless offline          
 npm run test => Iniciar pruebas unitarias de servicios con jest   
