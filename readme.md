@@ -5,8 +5,8 @@ Api de pruebas usando la api de Star Wars
 ## Uso:
 Para el uso de la api se requiere acceder a la URL en el punto "Documentación"                 
 
-Todos los endpoints se encuentran desplegados en la url de Documentación. 
-
+Todos los endpoints se encuentran desplegados en la url de Documentación y cada carpeta tiene breves descripciones e instrucciones de uso si se necesitara.      
+    
 Los endpoints no se encuentran con autorización o restricción de algún tipo.
 
 ### Modelos nuevos:
